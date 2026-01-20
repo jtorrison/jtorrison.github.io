@@ -1,36 +1,27 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>DubDB Management | Bookings</title>
-  <meta name="description" content="DubDB Management is a boutique booking and artist representation office based in Colorado." />
 
+  <meta name="description" content="DubDB Management handles booking inquiries, availability, and show logistics. Email bookings@dubdbmanagement.com." />
   <meta property="og:title" content="DubDB Management" />
-  <meta property="og:description" content="Boutique bookings and representation." />
+  <meta property="og:description" content="Bookings and artist representation. Email bookings@dubdbmanagement.com." />
   <meta property="og:type" content="website" />
 
-  <link rel="icon" href="assets/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <div class="bg" aria-hidden="true">
-    <div class="bg-grid"></div>
-    <div class="bg-glow glow-1"></div>
-    <div class="bg-glow glow-2"></div>
-  </div>
-
   <header class="header">
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="DubDB Management home">
-        <div class="mark">
-          <img src="assets/wdb-records-logo.png" alt="WDB Records logo" loading="eager" />
-        </div>
+        <img class="logo" src="assets/wdb-records-logo.png" alt="DubDB Management" />
         <div class="brand-text">
           <div class="brand-name">DubDB Management</div>
           <div class="brand-sub">Bookings and Artist Representation • Colorado</div>
@@ -41,204 +32,81 @@
         <a href="#artists">Artists</a>
         <a href="#contact">Contact</a>
       </nav>
-
-      <div class="header-actions">
-        <a class="btn small ghost" href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20DubDB%20Management">Email</a>
-      </div>
     </div>
   </header>
 
   <main id="top" class="wrap">
     <section class="hero">
-      <div class="hero-left">
-        <div class="kicker">
-          <span class="dot"></span>
-          Boutique bookings
-        </div>
+      <h1>Bookings and artist representation.</h1>
 
-        <h1>
-          Representation for
-          <span class="accent">select electronic artists</span>.
-        </h1>
+      <p class="lede">
+        DubDB Management handles booking inquiries, availability, and show logistics.
+        For all requests, email
+        <a class="inline-link" href="mailto:bookings@dubdbmanagement.com">bookings@dubdbmanagement.com</a>.
+      </p>
 
-        <p class="lede">
-          DubDB Management handles booking inquiries, availability, and show logistics.
-          For all requests, reach out via email.
-        </p>
+      <p class="note">
+        Please include date, city, venue, set length, and budget.
+      </p>
 
-        <div class="cta-row">
-          <a class="btn primary" href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Nosirrot">
-            Inquire for Bookings
-          </a>
-          <a class="btn ghost" href="#artists">View roster</a>
-        </div>
-
-        <div class="micro">
-          Please include date, city, venue, set length, and budget.
-        </div>
-
-        <div class="hero-meta">
-          <div class="meta-pill">Colorado, USA</div>
-          <div class="meta-pill">Email only</div>
-          <div class="meta-pill">Established 2026</div>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="card glass">
-          <div class="card-top">
-            <div class="chip">Now Representing</div>
-            <div class="pill">2026</div>
-          </div>
-
-          <div class="card-body">
-            <div class="headline">Nosirrot</div>
-            <div class="muted">Electronic • Bass • Club / Festival</div>
-
-            <div class="stat-row">
-              <div class="stat">
-                <div class="stat-k">Based</div>
-                <div class="stat-v">Colorado</div>
-              </div>
-              <div class="stat">
-                <div class="stat-k">Inquiries</div>
-                <div class="stat-v">Bookings</div>
-              </div>
-              <div class="stat">
-                <div class="stat-k">Label</div>
-                <div class="stat-v">WDB Records</div>
-              </div>
-            </div>
-
-            <div class="link-row">
-              <a class="link" href="https://soundcloud.com/nosirrot" target="_blank" rel="noreferrer">SoundCloud</a>
-              <a class="link" href="https://www.instagram.com/nosirrot/" target="_blank" rel="noreferrer">Instagram</a>
-            </div>
-          </div>
-
-          <div class="card-bottom">
-            <a class="btn small" href="mailto:bookings@dubdbmanagement.com?subject=Availability%20Request%20-%20Nosirrot">
-              Check availability
-            </a>
-            <span class="muted small-note">Professional inquiries only</span>
-          </div>
-        </div>
-
-        <div class="fineprint">
-          This website is a booking contact point for DubDB Management.
-        </div>
+      <div class="actions">
+        <a class="btn" href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry">Email bookings</a>
+        <button class="btn ghost" type="button" data-copy="bookings@dubdbmanagement.com">Copy email</button>
       </div>
     </section>
 
     <section id="artists" class="section">
       <div class="section-head">
         <h2>Artists</h2>
-        <p class="muted">Select roster. Offers and availability handled through DubDB Management.</p>
       </div>
 
-      <div class="grid">
-        <article class="tile glass">
-          <div class="tile-top">
-            <div class="tile-title">Nosirrot</div>
-            <div class="tile-sub">Artist</div>
+      <ul class="roster">
+        <li class="roster-item">
+          <div class="roster-left">
+            <div class="roster-name">Nosirrot</div>
+            <div class="roster-meta">
+              <a href="https://www.instagram.com/nosirrot/" target="_blank" rel="noreferrer">Instagram</a>
+              <span class="dot">•</span>
+              <a href="https://soundcloud.com/nosirrot" target="_blank" rel="noreferrer">SoundCloud</a>
+            </div>
           </div>
+          <a class="roster-cta" href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Nosirrot">Book</a>
+        </li>
 
-          <p class="tile-body">
-            High-energy selections built for late rooms and big systems.
-            For show offers, include date, city, venue, set length, and budget.
-          </p>
-
-          <div class="tile-links">
-            <a class="mini-link" href="https://www.instagram.com/nosirrot/" target="_blank" rel="noreferrer">Instagram</a>
-            <a class="mini-link" href="https://soundcloud.com/nosirrot" target="_blank" rel="noreferrer">SoundCloud</a>
+        <li class="roster-item">
+          <div class="roster-left">
+            <div class="roster-name">WDB Records</div>
+            <div class="roster-meta">
+              <a href="https://soundcloud.com/wdb-records" target="_blank" rel="noreferrer">SoundCloud</a>
+            </div>
           </div>
-
-          <div class="tile-actions">
-            <a class="btn small primary" href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Nosirrot">
-              Book Nosirrot
-            </a>
-            <a class="btn small ghost" href="#contact">Contact</a>
-          </div>
-        </article>
-
-        <article class="tile glass">
-          <div class="tile-top">
-            <div class="tile-title">WDB Records</div>
-            <div class="tile-sub">Label</div>
-          </div>
-
-          <p class="tile-body">
-            Releases and catalog information available on request.
-            Booking and representation inquiries should go through management.
-          </p>
-
-          <div class="tile-links">
-            <a class="mini-link" href="https://soundcloud.com/wdb-records" target="_blank" rel="noreferrer">SoundCloud</a>
-          </div>
-
-          <div class="tile-actions">
-            <a class="btn small ghost" href="mailto:bookings@dubdbmanagement.com?subject=WDB%20Records%20Inquiry">
-              Email label
-            </a>
-          </div>
-        </article>
-      </div>
+          <a class="roster-cta" href="mailto:bookings@dubdbmanagement.com?subject=Inquiry%20-%20WDB%20Records">Contact</a>
+        </li>
+      </ul>
     </section>
 
-    <section id="contact" class="section contact">
-      <div class="contact-card glass">
-        <div class="contact-main">
-          <h2>Contact</h2>
-          <p class="muted">
-            For bookings, availability, and logistics:
-          </p>
-
-          <div class="email-row">
-            <a class="email" href="mailto:bookings@dubdbmanagement.com">bookings@dubdbmanagement.com</a>
-            <button class="btn small ghost" id="copyEmail" type="button" aria-label="Copy bookings email">
-              Copy
-            </button>
-          </div>
-
-          <div class="bullets">
-            <div class="bullet"><span>Include:</span> date, city, venue, set length, budget</div>
-            <div class="bullet"><span>Optional:</span> stage times, tech rider needs, accommodation</div>
-          </div>
-
-          <div class="divider"></div>
-
-          <div class="note">
-            If you need a fast response, put the show date in the subject line.
-          </div>
-        </div>
-
-        <div class="contact-side">
-          <div class="mini glass">
-            <div class="mini-k">Office</div>
-            <div class="mini-v">Colorado, USA</div>
-          </div>
-          <div class="mini glass">
-            <div class="mini-k">Bookings</div>
-            <div class="mini-v">Email only</div>
-          </div>
-          <div class="mini glass">
-            <div class="mini-k">Roster</div>
-            <div class="mini-v">Select artists</div>
-          </div>
-
-          <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
-            Copied.
-          </div>
-        </div>
+    <section id="contact" class="section">
+      <div class="section-head">
+        <h2>Contact</h2>
       </div>
+
+      <p class="lede">
+        Email
+        <a class="inline-link" href="mailto:bookings@dubdbmanagement.com">bookings@dubdbmanagement.com</a>
+        for all booking and representation inquiries.
+      </p>
+
+      <p class="note">
+        Please include date, city, venue, set length, and budget.
+      </p>
     </section>
 
     <footer class="footer">
-      <div class="muted">© <span id="year"></span> DubDB Management. All rights reserved.</div>
-      <div class="muted small-note">Built for booking inquiries.</div>
+      <div>© <span id="year"></span> DubDB Management</div>
     </footer>
   </main>
 
+  <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
   <script src="script.js"></script>
 </body>
 </html>
