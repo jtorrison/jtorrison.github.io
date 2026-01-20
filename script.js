@@ -1,28 +1,22 @@
-(function () {
-  const y = document.getElementById("year");
-  if (y) y.textContent = new Date().getFullYear();
+// Year in footer
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  const toast = document.getElementById("toast");
-  let toastTimer = null;
+// Fade-in on scroll (IntersectionObserver)
+const reveals = document.querySelectorAll(".reveal");
 
-  function showToast(msg) {
-    if (!toast) return;
-    toast.textContent = msg;
-    toast.classList.add("show");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove("show"), 1200);
-  }
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("is-visible");
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+  );
 
-  document.addEventListener("click", async (e) => {
-    const btn = e.target.closest("[data-copy]");
-    if (!btn) return;
-
-    const text = btn.getAttribute("data-copy");
-    try {
-      await navigator.clipboard.writeText(text);
-      showToast("Copied");
-    } catch {
-      showToast("Copy failed");
-    }
-  });
-})();
+  reveals.forEach((el) => io.observe(el));
+} else {
+  // Fallback
+  reveals.forEach((el) => el.classList.add("is-visible"));
+}
