@@ -446,3 +446,13 @@ a.inline-link:hover{
   .section{ padding: 54px 0; }
   .roster-item{ padding: 16px 14px; }
 }
+
+
+.logo-mark{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 10px;
+}
