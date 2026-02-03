@@ -157,6 +157,33 @@ a.inline-link:hover{
   color: rgba(255,255,255,.98);
   border-bottom-color: rgba(255,255,255,.62);
 }
+.hero{
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-mark{
+  position: absolute;
+  right: -120px;
+  top: -120px;
+  width: 560px;
+  height: 560px;
+  opacity: 0.06;
+  filter: blur(0.2px);
+  transform: rotate(-8deg);
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 980px){
+  .hero-mark{
+    right: -180px;
+    top: -180px;
+    width: 520px;
+    height: 520px;
+    opacity: 0.05;
+  }
+}
 
 /* Hero */
 .hero{
