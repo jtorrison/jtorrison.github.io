@@ -1,121 +1,283 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DubDB Management | Bookings</title>
-  <link rel="icon" href="assets/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+/* ── Reset & Base ───────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <!-- NAV -->
-  <nav id="top">
-    <a href="#top" class="nav-brand">
-      <img src="assets/favicon.png" alt="DubDB logo" />
-      <span>DubDB Management</span>
-    </a>
-    <div class="nav-links">
-      <a href="#artists">Artists</a>
-      <a href="#contact" class="btn-outline">Contact</a>
-    </div>
-  </nav>
+:root {
+  --bg:       #0a0a0a;
+  --surface:  #141414;
+  --border:   #222;
+  --text:     #f0f0f0;
+  --muted:    #666;
+  --accent:   #e8e8e8;
+  --max-w:    1100px;
+}
 
-  <!-- HERO -->
-  <section class="hero">
-    <p class="eyebrow">Bookings &amp; Artist Representation &mdash; Colorado</p>
-    <h1>Bookings and<br />artist representation.</h1>
-    <p class="hero-sub">
-      DubDB Management handles booking inquiries, availability, and show logistics.
-      For all requests, email
-      <a href="mailto:bookings@dubdbmanagement.com">bookings@dubdbmanagement.com</a>.
-      <br />Please include date, city, venue, set length, and budget.
-    </p>
-    <div class="hero-actions">
-      <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry" class="btn-primary">Email Bookings</a>
-      <button class="btn-ghost" onclick="copyEmail()">Copy Email</button>
-    </div>
-  </section>
+html { scroll-behavior: smooth; }
 
-  <!-- ARTISTS -->
-  <section id="artists">
-    <h2>Roster</h2>
-    <div class="artist-grid">
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
 
-      <div class="artist-card">
-        <h3>Nosirrot</h3>
-        <div class="artist-links">
-          <a href="https://www.instagram.com/nosirrot/" target="_blank">Instagram</a>
-          <a href="https://soundcloud.com/nosirrot" target="_blank">SoundCloud</a>
-        </div>
-        <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Nosirrot" class="btn-outline">Book</a>
-      </div>
+a { color: inherit; text-decoration: none; }
 
-      <div class="artist-card">
-        <h3>WDB Records</h3>
-        <div class="artist-links">
-          <a href="https://soundcloud.com/wdb-records" target="_blank">SoundCloud</a>
-        </div>
-        <a href="mailto:bookings@dubdbmanagement.com?subject=Inquiry%20-%20WDB%20Records" class="btn-outline">Contact</a>
-      </div>
+/* ── Nav ────────────────────────────────────────── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
 
-      <div class="artist-card">
-        <h3>Lowjack</h3>
-        <div class="artist-links">
-          <a href="https://soundcloud.com/djlowjack" target="_blank">SoundCloud</a>
-        </div>
-        <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Lowjack" class="btn-outline">Book</a>
-      </div>
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
 
-      <div class="artist-card">
-        <h3>Randy Rene</h3>
-        <div class="artist-links">
-          <a href="https://soundcloud.com/randyreneco" target="_blank">SoundCloud</a>
-        </div>
-        <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Randy%20Rene" class="btn-outline">Book</a>
-      </div>
+.nav-brand img { width: 28px; height: 28px; border-radius: 4px; }
 
-      <div class="artist-card">
-        <h3>DJ Ju1c3</h3>
-        <div class="artist-links">
-          <a href="https://soundcloud.com/dj-ju1c3" target="_blank">SoundCloud</a>
-        </div>
-        <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20DJ%20Ju1c3" class="btn-outline">Book</a>
-      </div>
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 
-      <div class="artist-card">
-        <h3>Griffin Huber</h3>
-        <div class="artist-links">
-          <span class="coming-soon">Links coming soon</span>
-        </div>
-        <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Griffin%20Huber" class="btn-outline">Book</a>
-      </div>
+.nav-links a {
+  font-size: 0.875rem;
+  color: var(--muted);
+  transition: color 0.2s;
+  letter-spacing: 0.04em;
+}
 
-    </div>
-  </section>
+.nav-links a:hover { color: var(--text); }
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p class="contact-sub">Bookings and representation</p>
-    <a href="mailto:bookings@dubdbmanagement.com" class="contact-email">bookings@dubdbmanagement.com</a>
-    <p class="contact-note">Please include date, city, venue, set length, and budget.</p>
-    <div class="hero-actions">
-      <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry" class="btn-primary">Email Bookings</a>
-      <button class="btn-ghost" onclick="copyEmail()">Copy Email</button>
-    </div>
-  </section>
+/* ── Buttons ────────────────────────────────────── */
+.btn-primary {
+  display: inline-block;
+  padding: 0.7rem 1.75rem;
+  background: var(--text);
+  color: var(--bg);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; <span id="year"></span> DubDB Management</p>
-  </footer>
+.btn-primary:hover { opacity: 0.85; }
 
-  <script src="script.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+.btn-outline {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
 
-</body>
-</html>
+.btn-outline:hover { border-color: var(--text); color: var(--text); }
+
+.btn-ghost {
+  display: inline-block;
+  padding: 0.7rem 1.75rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  background: transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-ghost:hover { border-color: var(--text); color: var(--text); }
+
+/* ── Hero ───────────────────────────────────────── */
+.hero {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 7rem 2.5rem 6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.hero-sub {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.hero-sub a {
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+
+.hero-sub a:hover { border-color: var(--text); }
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* ── Artists ────────────────────────────────────── */
+#artists {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 5rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+#artists h2,
+#contact h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: 0.04em;
+  margin-bottom: 3rem;
+}
+
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.artist-card {
+  background: var(--bg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: background 0.2s;
+}
+
+.artist-card:hover { background: var(--surface); }
+
+.artist-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+.artist-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.artist-links a {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.artist-links a:hover { color: var(--text); border-color: var(--text); }
+
+.coming-soon {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ── Contact ────────────────────────────────────── */
+#contact {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 5rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-sub {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.contact-email {
+  display: block;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid transparent;
+  width: fit-content;
+  transition: border-color 0.2s;
+}
+
+.contact-email:hover { border-color: var(--text); }
+
+.contact-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* ── Footer ─────────────────────────────────────── */
+footer {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 640px) {
+  nav { padding: 1rem 1.25rem; }
+  .nav-brand span { display: none; }
+  .hero, #artists, #contact, footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero { padding-top: 4rem; padding-bottom: 4rem; }
+  .artist-grid { grid-template-columns: 1fr; }
+}
