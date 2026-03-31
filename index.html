@@ -1,169 +1,121 @@
-
-<section class="hero reveal">
-  <img class="hero-mark" src="assets/favicon.png" alt="" aria-hidden="true" />
-  ...
-</section>
-
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
-<link rel="icon" type="image/png" href="/assets/favicon.png">
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DubDB Management | Bookings</title>
-
-  <meta name="description" content="DubDB Management handles booking inquiries, availability, and show logistics. Email bookings@dubdbmanagement.com." />
-  <meta property="og:title" content="DubDB Management" />
-  <meta property="og:description" content="Bookings and artist representation. Email bookings@dubdbmanagement.com." />
-  <meta property="og:type" content="website" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="/styles.css?v=4" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header class="header">
-    <div class="wrap header-inner">
-      <a class="brand" href="#top" aria-label="DubDB Management home">
-        <img class="logo logo-mark" src="assets/favicon.png" alt="DubDB" />
 
-        <div class="brand-text">
-          <div class="brand-name">DubDB Management</div>
-          <div class="brand-sub">Bookings and Artist Representation • Colorado</div>
-        </div>
-      </a>
-
-      <nav class="nav">
-        <a href="#artists">Artists</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <!-- NAV -->
+  <nav id="top">
+    <a href="#top" class="nav-brand">
+      <img src="assets/favicon.png" alt="DubDB logo" />
+      <span>DubDB Management</span>
+    </a>
+    <div class="nav-links">
+      <a href="#artists">Artists</a>
+      <a href="#contact" class="btn-outline">Contact</a>
     </div>
-  </header>
+  </nav>
 
-  <main id="top" class="wrap">
-    <section class="hero reveal">
-      <h1>Bookings and artist representation.</h1>
+  <!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow">Bookings &amp; Artist Representation &mdash; Colorado</p>
+    <h1>Bookings and<br />artist representation.</h1>
+    <p class="hero-sub">
+      DubDB Management handles booking inquiries, availability, and show logistics.
+      For all requests, email
+      <a href="mailto:bookings@dubdbmanagement.com">bookings@dubdbmanagement.com</a>.
+      <br />Please include date, city, venue, set length, and budget.
+    </p>
+    <div class="hero-actions">
+      <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry" class="btn-primary">Email Bookings</a>
+      <button class="btn-ghost" onclick="copyEmail()">Copy Email</button>
+    </div>
+  </section>
 
-      <p class="lede">
-        DubDB Management handles booking inquiries, availability, and show logistics.
-        For all requests, email
-        <a class="inline-link" href="mailto:bookings@dubdbmanagement.com">bookings@dubdbmanagement.com</a>.
-      </p>
+  <!-- ARTISTS -->
+  <section id="artists">
+    <h2>Roster</h2>
+    <div class="artist-grid">
 
-      <p class="note">
-        Please include date, city, venue, set length, and budget.
-      </p>
-
-      <div class="actions">
-        <a class="btn" href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry">Email bookings</a>
-        <button class="btn ghost" type="button" data-copy="bookings@dubdbmanagement.com">Copy email</button>
-      </div>
-    </section>
-
-    <section id="artists" class="section reveal">
-      <div class="section-head">
-        <h2>Artists</h2>
-        <div class="section-kicker">Roster</div>
-      </div>
-
-      <ul class="roster">
-        <li class="roster-item">
-          <div class="roster-left">
-            <div class="roster-name">Nosirrot</div>
-            <div class="roster-links">
-              <a class="chip" href="https://www.instagram.com/nosirrot/" target="_blank" rel="noreferrer">Instagram</a>
-              <a class="chip" href="https://soundcloud.com/nosirrot" target="_blank" rel="noreferrer">SoundCloud</a>
-            </div>
-          </div>
-          <a class="roster-cta" href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Nosirrot">Book</a>
-        </li>
-
-        <li class="roster-item">
-          <div class="roster-left">
-            <div class="roster-name">WDB Records</div>
-            <div class="roster-links">
-              <a class="chip" href="https://soundcloud.com/wdb-records" target="_blank" rel="noreferrer">SoundCloud</a>
-            </div>
-          </div>
-          <a class="roster-cta" href="mailto:bookings@dubdbmanagement.com?subject=Inquiry%20-%20WDB%20Records">Contact</a>
-        </li>
-
-        <li class="roster-item">
-          <div class="roster-left">
-            <div class="roster-name">Lowjack</div>
-            <div class="roster-links">
-              <a class="chip" href="https://soundcloud.com/djlowjack" target="_blank" rel="noreferrer">SoundCloud</a>
-            </div>
-          </div>
-          <a class="roster-cta" href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Lowjack">Book</a>
-        </li>
-
-        <li class="roster-item">
-          <div class="roster-left">
-            <div class="roster-name">Randy Rene</div>
-            <div class="roster-links">
-              <a class="chip" href="https://soundcloud.com/randyreneco" target="_blank" rel="noreferrer">SoundCloud</a>
-            </div>
-          </div>
-          <a class="roster-cta" href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Randy%20Rene">Book</a>
-        </li>
-
-        <li class="roster-item">
-          <div class="roster-left">
-            <div class="roster-name">DJ Ju1c3</div>
-            <div class="roster-links">
-              <a class="chip" href="https://soundcloud.com/dj-ju1c3" target="_blank" rel="noreferrer">SoundCloud</a>
-            </div>
-          </div>
-          <a class="roster-cta" href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20DJ%20Ju1c3">Book</a>
-        </li>
-
-        <li class="roster-item">
-          <div class="roster-left">
-            <div class="roster-name">Griffin Huber</div>
-            <div class="roster-links">
-              <span class="chip muted-chip" aria-hidden="true">Links coming soon</span>
-            </div>
-          </div>
-          <a class="roster-cta" href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Griffin%20Huber">Book</a>
-        </li>
-      </ul>
-    </section>
-
-    <section id="contact" class="section reveal">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <div class="section-kicker">Bookings and representation</div>
-      </div>
-
-      <div class="contact-card">
-        <div class="contact-main">
-          <div class="contact-label">Email</div>
-          <a class="contact-email" href="mailto:bookings@dubdbmanagement.com">bookings@dubdbmanagement.com</a>
-          <p class="contact-note">
-            Please include date, city, venue, set length, and budget.
-          </p>
+      <div class="artist-card">
+        <h3>Nosirrot</h3>
+        <div class="artist-links">
+          <a href="https://www.instagram.com/nosirrot/" target="_blank">Instagram</a>
+          <a href="https://soundcloud.com/nosirrot" target="_blank">SoundCloud</a>
         </div>
-
-        <div class="contact-actions">
-          <a class="btn" href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry">Email bookings</a>
-          <button class="btn ghost" type="button" data-copy="bookings@dubdbmanagement.com">Copy email</button>
-        </div>
+        <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Nosirrot" class="btn-outline">Book</a>
       </div>
 
-      <footer class="footer">
-        <div>© <span id="year"></span> DubDB Management</div>
-      </footer>
-    </section>
-  </main>
+      <div class="artist-card">
+        <h3>WDB Records</h3>
+        <div class="artist-links">
+          <a href="https://soundcloud.com/wdb-records" target="_blank">SoundCloud</a>
+        </div>
+        <a href="mailto:bookings@dubdbmanagement.com?subject=Inquiry%20-%20WDB%20Records" class="btn-outline">Contact</a>
+      </div>
 
-  <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+      <div class="artist-card">
+        <h3>Lowjack</h3>
+        <div class="artist-links">
+          <a href="https://soundcloud.com/djlowjack" target="_blank">SoundCloud</a>
+        </div>
+        <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Lowjack" class="btn-outline">Book</a>
+      </div>
+
+      <div class="artist-card">
+        <h3>Randy Rene</h3>
+        <div class="artist-links">
+          <a href="https://soundcloud.com/randyreneco" target="_blank">SoundCloud</a>
+        </div>
+        <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Randy%20Rene" class="btn-outline">Book</a>
+      </div>
+
+      <div class="artist-card">
+        <h3>DJ Ju1c3</h3>
+        <div class="artist-links">
+          <a href="https://soundcloud.com/dj-ju1c3" target="_blank">SoundCloud</a>
+        </div>
+        <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20DJ%20Ju1c3" class="btn-outline">Book</a>
+      </div>
+
+      <div class="artist-card">
+        <h3>Griffin Huber</h3>
+        <div class="artist-links">
+          <span class="coming-soon">Links coming soon</span>
+        </div>
+        <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry%20-%20Griffin%20Huber" class="btn-outline">Book</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="contact-sub">Bookings and representation</p>
+    <a href="mailto:bookings@dubdbmanagement.com" class="contact-email">bookings@dubdbmanagement.com</a>
+    <p class="contact-note">Please include date, city, venue, set length, and budget.</p>
+    <div class="hero-actions">
+      <a href="mailto:bookings@dubdbmanagement.com?subject=Booking%20Inquiry" class="btn-primary">Email Bookings</a>
+      <button class="btn-ghost" onclick="copyEmail()">Copy Email</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="year"></span> DubDB Management</p>
+  </footer>
+
   <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
 </body>
 </html>
